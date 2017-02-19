@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "node server",
+    "dev:debug": "node --inspect server",
     "start": "cross-env NODE_ENV=production node server",
     "build": "rimraf dist && npm run build:client && npm run build:server",
     "build:client": "cross-env NODE_ENV=production webpack --config build/webpack.client.config.js --progress --hide-modules",
@@ -30,6 +31,7 @@
     "vuex-router-sync": "^4.0.2"
   },
   "devDependencies": {
+    "acorn-dynamic-import": "^2.0.1",
     "autoprefixer": "^6.5.3",
     "buble": "^0.15.1",
     "buble-loader": "^0.4.0",
@@ -37,6 +39,8 @@
     "extract-text-webpack-plugin": "^2.0.0-beta.3",
     "file-loader": "^0.10.0",
     "html-webpack-plugin": "^2.24.1",
+    "jscodeshift": "^0.3.30",
+    "jscodeshift-imports": "^1.0.3",
     "rimraf": "^2.5.4",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.4.0",

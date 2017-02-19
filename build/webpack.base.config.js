@@ -20,6 +20,11 @@ module.exports = {
     publicPath: '/dist/',
     filename: '[name].[chunkhash].js'
   },
+  resolveLoader: {
+    alias: {
+      "async-vue-component-loader": require.resolve("./asyncComponentLoader.js")
+    }
+  },
   resolve: {
     alias: {
       'public': path.resolve(__dirname, '../public')
