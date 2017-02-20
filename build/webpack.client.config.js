@@ -35,6 +35,7 @@ if (process.env.NODE_ENV === 'production') {
   // here we overwrite the loader config for <style lang="stylus">
   // so they are extracted.
   vueConfig.loaders = {
+    js: "buble-loader!async-vue-component-loader",
     stylus: ExtractTextPlugin.extract({
       loader: 'css-loader!stylus-loader',
       fallbackLoader: 'vue-style-loader' // <- this is a dep of vue-loader
